@@ -1,0 +1,16 @@
+Package: polysf
+Type: Package
+Title: Strictly feasible representation for a polytope
+Version: 1.0
+Date: 2023-07-26
+Author: Xiaozhu Zhang
+Maintainer: Xiaozhu Zhang <xz303@duke.edu>
+Description: Providing a strictly feasible representation for a polytope with implicit
+  equality constraints, and a sampler on the degenerated polytope. The same functionality
+  for Lasso solutions in a non-uniqueness regime, as a special case of the degenerated polytope,
+  is provided as well.
+License: MIT + file LICENSE
+Imports: Rcpp (>= 1.0.11), RcppEigen, lpSolve, Matrix, pracma, volesti, glmnet, mvtnorm
+LinkingTo: Rcpp, RcppEigen
+RoxygenNote: 7.2.3
+Encoding: UTF-8
