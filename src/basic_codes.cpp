@@ -1,8 +1,6 @@
 // -*- mode: C++; c-indent-level: 4; c-basic-offset: 4; indent-tabs-mode: nil; -*-
 
 // we only include RcppEigen.h which pulls Rcpp.h in for us
-#define EIGEN_PERMANENTLY_DISABLE_STUPID_WARNINGS
-#include <Eigen/Eigen>
 #include <RcppEigen.h>
 
 

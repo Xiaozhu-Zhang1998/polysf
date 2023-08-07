@@ -15,9 +15,6 @@ library(polysf)
 
 ## Example
 
-``` r
-library(polysf)
-```
 ### A degenerated polytope
 
 ``` r
