@@ -9,8 +9,8 @@ The package `polysf` is designed for providing a strictly feasible representatio
 ## Installation
 
 ``` r
-devtools::install_github(repo = "Xiaozhu-Zhang1998/Polysf")
-library(Polysf)
+devtools::install_github(repo = "Xiaozhu-Zhang1998/polysf")
+library(polysf)
 ```
 
 ## Example
