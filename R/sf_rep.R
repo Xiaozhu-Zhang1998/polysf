@@ -25,7 +25,7 @@
 #' 
 #' @param A The matrix \eqn{A} of the polytope \eqn{\mathcal{S}}.
 #' @param b The matrix \eqn{b} of the polytope \eqn{\mathcal{S}}.
-#' @return The function \code{sf_rep} returns a S3 object of class sf_rep
+#' @return The function \code{sf_rep} returns an S3 object of class sf_rep
 #'  containing the following components:
 #'   \item{A}{The argument \code{A}.}
 #'   \item{b}{The argument \code{b}.}

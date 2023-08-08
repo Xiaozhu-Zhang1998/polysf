@@ -45,7 +45,7 @@
 #' where \eqn{{\rm dim}\mathcal{\Theta}} is the intrinsic dimension of \eqn{\Theta}. Note that
 #' there exists a bijection between \eqn{\Theta} and \eqn{\mathcal{K}} based on the transformation
 #' pair \eqn{(T, \nu)}. Particularly, for any \eqn{y\in\mathcal{\Theta}}, we have 
-#' \eqn{ T \begin{bmatrix} \nu \\ y \end{bmatrix} \in\mathcal{\Theta} }.
+#' \eqn{ T \begin{bmatrix} \nu \\ y \end{bmatrix} \in\Theta }.
 #' 
 #' 
 #' 
@@ -62,7 +62,7 @@
 #' @param tol A tolerance numeric greater than 0. Need be provided only when \code{type = "hat"} 
 #' or \code{type = "star"}. See \code{tol} in \link[polysf]{equi_index_lasso} for details.
 #' 
-#' @return The function \code{sf_rep_lasso} returns a S3 object of class \code{sf_rep_lasso}
+#' @return The function \code{sf_rep_lasso} returns an S3 object of class \code{sf_rep_lasso}
 #' containing the following components:
 #'    \item{X}{The argument \code{X}.}
 #'    \item{beta}{The argument \code{beta}.}

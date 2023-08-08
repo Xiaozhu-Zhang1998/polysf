@@ -35,7 +35,7 @@ or \code{type = "star"}. See \code{tol} in \link[polysf]{equi_index_lasso} for d
 \item{equidx}{Optional. An integer vector containing all elements of the equi-correlation set.}
 }
 \value{
-The function \code{sf_rep_lasso} returns a S3 object of class \code{sf_rep_lasso}
+The function \code{sf_rep_lasso} returns an S3 object of class \code{sf_rep_lasso}
 containing the following components:
    \item{X}{The argument \code{X}.}
    \item{beta}{The argument \code{beta}.}
@@ -96,7 +96,7 @@ The strictly feasible representation of \eqn{\Theta} is given by
 where \eqn{{\rm dim}\mathcal{\Theta}} is the intrinsic dimension of \eqn{\Theta}. Note that
 there exists a bijection between \eqn{\Theta} and \eqn{\mathcal{K}} based on the transformation
 pair \eqn{(T, \nu)}. Particularly, for any \eqn{y\in\mathcal{\Theta}}, we have 
-\eqn{ T \begin{bmatrix} \nu \\ y \end{bmatrix} \in\mathcal{\Theta} }.
+\eqn{ T \begin{bmatrix} \nu \\ y \end{bmatrix} \in\Theta }.
 }
 \examples{
 # generate a sparse data set with non-unique Lasso solns

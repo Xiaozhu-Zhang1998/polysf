@@ -12,7 +12,7 @@ sf_rep(A, b)
 \item{b}{The matrix \eqn{b} of the polytope \eqn{\mathcal{S}}.}
 }
 \value{
-The function \code{sf_rep} returns a S3 object of class sf_rep
+The function \code{sf_rep} returns an S3 object of class sf_rep
  containing the following components:
   \item{A}{The argument \code{A}.}
   \item{b}{The argument \code{b}.}
