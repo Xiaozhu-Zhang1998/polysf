@@ -7,15 +7,15 @@
 equi_index_lasso(X, y, lambda, beta, tol = 0.01)
 }
 \arguments{
-\item{X}{The design matrix.}
+\item{X}{the design matrix.}
 
-\item{y}{A vector denoting the response variable.}
+\item{y}{a vector denoting the response variable.}
 
-\item{lambda}{A numeric denoting the tuning parameter.}
+\item{lambda}{a numeric denoting the tuning parameter.}
 
-\item{beta}{A vector denoting a particular Lasso solution.}
+\item{beta}{a vector denoting a particular Lasso solution.}
 
-\item{tol}{A tolerance numeric greater than 0, which must cover the difference
+\item{tol}{a tolerance numeric greater than 0, which must cover the difference
 between \eqn{\lambda} and \eqn{|X^\top_i(y - X\hat\beta)|}.}
 }
 \value{

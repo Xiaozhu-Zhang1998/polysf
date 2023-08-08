@@ -20,11 +20,11 @@
 #' In conclusion, a too tight tolerance is more detrimental than a too loose one. An accurate
 #' \eqn{\hat\beta} (\code{beta}) and a slightly loose \code{tol} are always helpful.
 #' 
-#' @param X The design matrix.
-#' @param y A vector denoting the response variable.
-#' @param lambda A numeric denoting the tuning parameter.
-#' @param beta A vector denoting a particular Lasso solution.
-#' @param tol A tolerance numeric greater than 0, which must cover the difference
+#' @param X the design matrix.
+#' @param y a vector denoting the response variable.
+#' @param lambda a numeric denoting the tuning parameter.
+#' @param beta a vector denoting a particular Lasso solution.
+#' @param tol a tolerance numeric greater than 0, which must cover the difference
 #'  between \eqn{\lambda} and \eqn{|X^\top_i(y - X\hat\beta)|}.
 #' 
 #' @return An integer vector containing all elements of the equi-correlation set.

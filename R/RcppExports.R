@@ -13,10 +13,10 @@ lasso_fr <- function(Omega, pi) {
 #' @title Select independent rows of a matrix
 #' @description Given any matrix \code{M}, this function selects the first \code{r=rank(M)} 
 #' independent rows in \code{M} which form a row basis of \code{M}. 
-#' @param M A matrix.
+#' @param M a matrix.
 #' @return The function \code{ind_rows} returns a list containing the following components:
-#'   \item{N}{A matrix with \code{r=rank(M)} rows. Its rows come from the selected independent rows in \code{M}.}
-#'   \item{idx}{A logical vector. An element is \code{TRUE} if the corresponding row in \code{M} is selected, \code{FALSE} otherwise.}
+#'   \item{N}{a matrix with \code{r=rank(M)} rows. Its rows come from the selected independent rows in \code{M}.}
+#'   \item{idx}{a logical vector. An element is \code{TRUE} if the corresponding row in \code{M} is selected, \code{FALSE} otherwise.}
 #' @examples
 #' # generate a matrix M of rank 2 with dependent rows
 #' M = matrix(rnorm(16), nrow = 4)
@@ -30,11 +30,11 @@ ind_rows <- function(M) {
 }
 
 #' @name add_to_full
-#' @title Extend a full-row-rank matrix to a full-rank square matrix.
+#' @title Extend a full-row-rank matrix to a full-rank square matrix
 #' @description Given any full-row-rank matrix \code{N} with \code{n=ncol(N)} and \code{r=rank(N)}. 
 #' This function adds \code{n-r} independent rows to the matrix \code{N}, 
 #' such that the resulting new matrix is a full-rank square matrix.  
-#' @param N A full-row-rank matrix.
+#' @param N a full-row-rank matrix.
 #' @return A full-rank square matrix whose first \code{r} rows come from \code{N}.
 #' @examples 
 #' # generate a full-row-rank matrix

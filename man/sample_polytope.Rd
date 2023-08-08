@@ -7,16 +7,16 @@
 sample_polytope(obj, npoints, random_walk = NULL, distribution = NULL)
 }
 \arguments{
-\item{obj}{An S3 object of class \code{sf_rep}.}
+\item{obj}{an S3 object of class \code{sf_rep}.}
 
-\item{npoints}{The number of points that the function is going to sample.}
+\item{npoints}{the number of points that the function is going to sample.}
 
-\item{random_walk}{Optional. A list that declares the random walk and some
-related parameters. See the argument \code{random_walk} in \link[volesti]{sample_points} 
+\item{random_walk}{an optional list that declares the random walk and some
+related parameters. See the argument \code{random_walk} in \code{volesti::\link[volesti]{sample_points}} 
 for details.}
 
-\item{distribution}{Optional. A list that declares the target density and some 
-related parameters. See the argument \code{distribution} in \link[volesti]{sample_points}
+\item{distribution}{an optional list that declares the target density and some 
+related parameters. See the argument \code{distribution} in \code{volesti::\link[volesti]{sample_points}}
 for details.}
 }
 \value{

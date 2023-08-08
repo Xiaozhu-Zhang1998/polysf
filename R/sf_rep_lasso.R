@@ -41,42 +41,42 @@
 #' is well-defined.
 #' 
 #' The strictly feasible representation of \eqn{\Theta} is given by
-#' \eqn{\mathcal{K} = \{y\in\mathbb{R}^{{\rm dim}\mathcal{\Theta}}:\Gamma y\leq \gamma\}}
-#' where \eqn{{\rm dim}\mathcal{\Theta}} is the intrinsic dimension of \eqn{\Theta}. Note that
+#' \eqn{\mathcal{K} = \{y\in\mathbb{R}^{{\rm dim}\Theta}:\Gamma y\leq \gamma\}}
+#' where \eqn{{\rm dim}\Theta} is the intrinsic dimension of \eqn{\Theta}. Note that
 #' there exists a bijection between \eqn{\Theta} and \eqn{\mathcal{K}} based on the transformation
-#' pair \eqn{(T, \nu)}. Particularly, for any \eqn{y\in\mathcal{\Theta}}, we have 
+#' pair \eqn{(T, \nu)}. Particularly, for any \eqn{y\in\Theta}, we have 
 #' \eqn{ T \begin{bmatrix} \nu \\ y \end{bmatrix} \in\Theta }.
 #' 
 #' 
 #' 
-#' @param X The design matrix.
-#' @param beta A vector denoting a particular solution.
-#' @param type A character, \code{"hat"} if the set \eqn{\Theta} 
+#' @param X the design matrix.
+#' @param beta a vector denoting a particular solution.
+#' @param type a character, \code{"hat"} if the set \eqn{\Theta} 
 #' is the predicted theta set; \code{"star"} if the set \eqn{\Theta} is the true theta set; 
 #' can be left \code{NULL} if \code{equidx} is provided.
-#' @param y A vector denoting the response variable. Need be provided only when 
+#' @param y a vector denoting the response variable. Need be provided only when 
 #' \code{type = "hat"}.
-#' @param lambda A numeric denoting the tuning parameter. 
+#' @param lambda a numeric denoting the tuning parameter. 
 #' Need be provided only when \code{type = "hat"}.
-#' @param equidx Optional. An integer vector containing all elements of the equi-correlation set.
-#' @param tol A tolerance numeric greater than 0. Need be provided only when \code{type = "hat"} 
-#' or \code{type = "star"}. See \code{tol} in \link[polysf]{equi_index_lasso} for details.
+#' @param equidx an optional integer vector containing all elements of the equi-correlation set.
+#' @param tol a tolerance numeric greater than 0. Need be provided only when \code{type = "hat"} 
+#' or \code{type = "star"}. See \code{tol} in \code{polysf::\link[polysf]{equi_index_lasso}} for details.
 #' 
 #' @return The function \code{sf_rep_lasso} returns an S3 object of class \code{sf_rep_lasso}
 #' containing the following components:
-#'    \item{X}{The argument \code{X}.}
-#'    \item{beta}{The argument \code{beta}.}
-#'    \item{equidx}{The equi-correlation set either from input or found based on \code{type}, \code{y},
+#'    \item{X}{the argument \code{X}.}
+#'    \item{beta}{the argument \code{beta}.}
+#'    \item{equidx}{the equi-correlation set either from input or found based on \code{type}, \code{y},
 #'      \code{lambda}, and \code{tol}.}
-#'    \item{I}{An integer vector for possible future sampling.}
-#'    \item{signs}{An integer vector of length \eqn{d} denoting the signs of \eqn{\Theta}. For each feature,
+#'    \item{I}{an integer vector for possible future sampling.}
+#'    \item{signs}{an integer vector of length \eqn{d} denoting the signs of \eqn{\Theta}. For each feature,
 #'      +1 means the feature is active and its coefficient is always non-negative; 0 means the feature is inactive;
 #'      -1 means the feature is active and its coefficient is always non-positive.   }
-#'    \item{indim}{An integer denoting the intrinsic dimension of \eqn{\Theta}. }
-#'    \item{Gamma}{The matrix \eqn{\Gamma} of the polytope \eqn{\mathcal{K}}.}
-#'    \item{gamma}{The matrix \eqn{\gamma} of the polytope \eqn{\mathcal{K}}.}
-#'    \item{Tm}{The matrix \eqn{T} in the transofrmation pair \eqn{(T, \nu)}.}
-#'    \item{nv}{The matrix \eqn{\nu} in the transofrmation pair \eqn{(T, \nu)}.}
+#'    \item{indim}{an integer denoting the intrinsic dimension of \eqn{\Theta}. }
+#'    \item{Gamma}{the matrix \eqn{\Gamma} of the polytope \eqn{\mathcal{K}}.}
+#'    \item{gamma}{the matrix \eqn{\gamma} of the polytope \eqn{\mathcal{K}}.}
+#'    \item{Tm}{the matrix \eqn{T} in the transofrmation pair \eqn{(T, \nu)}.}
+#'    \item{nv}{the matrix \eqn{\nu} in the transofrmation pair \eqn{(T, \nu)}.}
 #' 
 #' @examples
 #' # generate a sparse data set with non-unique Lasso solns
@@ -104,7 +104,7 @@
 #'                        intercept = FALSE, standardize = FALSE)
 #' beta_fit = as.numeric( model$beta )
 #' 
-#' # Ex1: find the SF Rep of the predicted theta set 
+#' # eg1: find the SF Rep of the predicted theta set 
 #' # with pre-calculated equi-correlation set
 #' equidx = equi_index_lasso(X, y, lambda, beta_fit, tol = 1e-3)
 #' sf_rep_lasso(X, beta_fit, equidx = equidx)
@@ -112,7 +112,7 @@
 #' # without pre-calculated equi-correlation set
 #' sf_rep_lasso(X, beta_fit, type = "hat", y = y, lambda = lambda, tol = 1e-3)
 #' 
-#' # Ex2: find the SF Rep of the true theta set 
+#' # eg2: find the SF Rep of the true theta set 
 #' sf_rep_lasso(X, beta, type = "star", tol = 1e-5)
 #' 
 #' 
@@ -176,6 +176,17 @@ sf_rep_lasso = function(X, beta, type = NULL, y = NULL, lambda = NULL, tol = 1e-
 
 
 
+#' @name print.sf_rep_lasso
+#' @title Print the results of sf_rep_lasso
+#' @description
+#' The \code{print} method for class \code{sf_rep_lasso}.
+#' 
+#' @param x an S3 object of class \code{sf_rep_lasso}.
+#' @param ... further arguments passed to or from other methods.
+#' @return The output from \code{print}, summarizing the equi-correlation set,
+#' the sign of the Theta set, and the intrinsic dimension of \code{x}.
+#' @export
+#' 
 print.sf_rep_lasso = function(x, ...) {
   cat("Equi-correlation set:", "\n")
   cat(x$equidx)

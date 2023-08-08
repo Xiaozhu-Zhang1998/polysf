@@ -7,21 +7,21 @@
 sf_rep(A, b)
 }
 \arguments{
-\item{A}{The matrix \eqn{A} of the polytope \eqn{\mathcal{S}}.}
+\item{A}{the matrix \eqn{A} of the polytope \eqn{\mathcal{S}}.}
 
-\item{b}{The matrix \eqn{b} of the polytope \eqn{\mathcal{S}}.}
+\item{b}{the matrix \eqn{b} of the polytope \eqn{\mathcal{S}}.}
 }
 \value{
 The function \code{sf_rep} returns an S3 object of class sf_rep
  containing the following components:
-  \item{A}{The argument \code{A}.}
-  \item{b}{The argument \code{b}.}
-  \item{I}{An integer vector containing the indices of implicit constraints.}
-  \item{indim}{An integer denoting the intrinsic dimension of \eqn{\mathcal{S}}.}
-  \item{Gamma}{The matrix \eqn{\Gamma} of the polytope \eqn{\mathcal{S}^*}. }
-  \item{gamma}{The vector \eqn{\gamma} of the polytope \eqn{\mathcal{S}^*}. }
-  \item{Tm}{The matrix \eqn{T} in the transformation pair \eqn{(T,d)}.}
-  \item{d}{The vector \eqn{d} in the transformation pair \eqn{(T,d)}.}
+  \item{A}{the argument \code{A}.}
+  \item{b}{the argument \code{b}.}
+  \item{I}{an integer vector containing the indices of implicit constraints.}
+  \item{indim}{an integer denoting the intrinsic dimension of \eqn{\mathcal{S}}.}
+  \item{Gamma}{the matrix \eqn{\Gamma} of the polytope \eqn{\mathcal{S}^*}. }
+  \item{gamma}{the vector \eqn{\gamma} of the polytope \eqn{\mathcal{S}^*}. }
+  \item{Tm}{the matrix \eqn{T} in the transformation pair \eqn{(T,d)}.}
+  \item{d}{the vector \eqn{d} in the transformation pair \eqn{(T,d)}.}
 }
 \description{
 This function finds a strictly feasible representation of the given polytope 

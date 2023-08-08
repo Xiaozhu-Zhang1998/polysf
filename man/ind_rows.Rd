@@ -7,12 +7,12 @@
 ind_rows(M)
 }
 \arguments{
-\item{M}{A matrix.}
+\item{M}{a matrix.}
 }
 \value{
 The function \code{ind_rows} returns a list containing the following components:
-  \item{N}{A matrix with \code{r=rank(M)} rows. Its rows come from the selected independent rows in \code{M}.}
-  \item{idx}{A logical vector. An element is \code{TRUE} if the corresponding row in \code{M} is selected, \code{FALSE} otherwise.}
+  \item{N}{a matrix with \code{r=rank(M)} rows. Its rows come from the selected independent rows in \code{M}.}
+  \item{idx}{a logical vector. An element is \code{TRUE} if the corresponding row in \code{M} is selected, \code{FALSE} otherwise.}
 }
 \description{
 Given any matrix \code{M}, this function selects the first \code{r=rank(M)} 

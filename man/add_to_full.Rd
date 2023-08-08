@@ -2,12 +2,12 @@
 % Please edit documentation in R/RcppExports.R
 \name{add_to_full}
 \alias{add_to_full}
-\title{Extend a full-row-rank matrix to a full-rank square matrix.}
+\title{Extend a full-row-rank matrix to a full-rank square matrix}
 \usage{
 add_to_full(N)
 }
 \arguments{
-\item{N}{A full-row-rank matrix.}
+\item{N}{a full-row-rank matrix.}
 }
 \value{
 A full-rank square matrix whose first \code{r} rows come from \code{N}.
